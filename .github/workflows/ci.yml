@@ -6,8 +6,7 @@ on:
       - main
   schedule:
     - cron: "0 */3 * * *"
-  watch:
-    types: [starred]
+  workflow_dispatch:
 
 jobs:
   autogreen:
