@@ -1,4 +1,4 @@
-name: ci
+name: green-myself
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   schedule:
     - cron: "0 */3 * * *"
   watch:
-  types: [started]
+    types: [starred]
 
 jobs:
   autogreen:
