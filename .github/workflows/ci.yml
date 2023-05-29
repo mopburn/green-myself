@@ -20,9 +20,9 @@ jobs:
 
       - name: Auto green
         env: 
-        user.email: ${{ secrets.user.email }} # secrets_id 提
+        USER_EMAIL: ${{ secrets.USER_EMAIL }} # secrets_id 提
         run: |
-          git config --local user.email "$user.email"
+          git config --local user.email "$USER_EMAIL"
           git config --local user.name "mopburn"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
